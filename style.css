@@ -1,5 +1,6 @@
 /* Fixed navbar */
 nav {
+  opacity: 0.5;
   position: fixed;
   top: 0;
   left: 0;
@@ -27,23 +28,26 @@ nav {
 }
 
 .navbar a:hover {
-  color: #ffcc00;
+  color: #19d5f1;
 }
 
 /* Body scrollable */
 body {
-  padding-top: 60px; /* offset for fixed navbar */
+  padding-top: 1px;
   font-family: "Roboto", sans-serif;
   margin: 0;
-  display: block; /* remove flex centering */
+
   min-height: 100vh; /* allow body to grow */
   overflow-y: auto; /* enable vertical scrolling */
+  overflow-x: hidden; /* hide horizontal scrollbar */
 }
 
 /* Container for panels */
 .container {
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: flex;
-
+  align-items: center;
   width: 90vw;
   margin: 20px auto; /* center horizontally */
   gap: 10px;
@@ -95,6 +99,13 @@ body {
     display: none;
   }
 }
+
+/* scale hero for mobile */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 15px; /* vertical scrollbar if needed */
@@ -106,4 +117,42 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(#642bff, #ff22e6);
+}
+
+/* hero section in destination */
+.hero {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* full screen */
+  background-image: url("./images/kirkjufellsfoss_iceland.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: white;
+  padding: 10px 20px;
+}
+
+.hero-content h1 {
+  padding: 10px 20px;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-btn {
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
 }
