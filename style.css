@@ -14,7 +14,7 @@ nav {
     0,
     0,
     0.5
-  ); /* black with 50% opacitbut text is still 100% visable */
+  ); /* black with 50% opaciy tbut text is still 100% visable */
   color: white;
   position: fixed;
   top: 0;
@@ -26,6 +26,7 @@ nav {
 }
 
 .navbar {
+  font-family: "Caudex", serif;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -51,7 +52,7 @@ body {
   padding-top: 1px;
   font-family: "Roboto", sans-serif;
   margin: 0;
-
+  background-color: #9da0a5;
   min-height: 100vh; /* allow body to grow */
   overflow-y: auto; /* enable vertical scrolling */
   overflow-x: hidden; /* hide horizontal scrollbar */
@@ -138,7 +139,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(#3b5d50, #1b2a41);
+  background: linear-gradient(#8c8f35, #1b2a41);
 }
 
 /* hero section for destination */
@@ -146,7 +147,7 @@ body {
   margin: 0;
   padding: 0;
   height: 400px; /* full screen */
-  background-image: url("./images/Kirkjufell-mountain.jpg");
+  background-image: url("./images/194e604e7581669452724007be4f033f49c6c95b-3674x2454.avif");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -155,16 +156,19 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-
-  color: black;
 }
 
 .hero-content h1 {
+  color: white;
+  font-family: "Caudex", serif;
+
   padding: 0px 20px;
   font-size: 3rem;
 }
 
 .hero-content p {
+  font-family: "Caudex", serif;
+
   background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
   border-radius: 10px;
   color: white;
@@ -174,6 +178,8 @@ body {
 }
 
 .hero-btn {
+  font-family: "Uncial Antiqua";
+
   margin-top: 30px;
   padding: 10px 20px;
   background: rgba(0, 0, 0, 0.6);
@@ -184,5 +190,20 @@ body {
 }
 
 .hero-btn:hover {
-  background: #1b2a41;
+  background: #cead61;
+}
+
+/*flex box section under her */
+.flex_container {
+  margin: 60px;
+  padding: 30px;
+  display: flex;
+  background-color: DodgerBlue;
+}
+
+.flex_container div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
 }
