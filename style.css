@@ -21,12 +21,13 @@ nav {
   left: 0;
   width: 100%;
 
-  padding: 10px;
+  padding: 20px;
   z-index: 1000; /* keep above content */
 }
 
 .navbar {
   font-family: "Caudex", serif;
+  font-size: large;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -52,7 +53,7 @@ body {
   padding-top: 1px;
   font-family: "Roboto", sans-serif;
   margin: 0;
-  background-color: #9da0a5;
+  background-color: #ecedee;
   min-height: 100vh; /* allow body to grow */
   overflow-y: auto; /* enable vertical scrolling */
   overflow-x: hidden; /* hide horizontal scrollbar */
@@ -135,26 +136,26 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #d1e5ff;
+  background: #c9c4c4;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(#8c8f35, #1b2a41);
+  background: #d3b878;
 }
 
 /* hero section for destination */
 .hero {
-  margin: 0;
-  padding: 0;
-  height: 400px; /* full screen */
   background-image: url("./images/194e604e7581669452724007be4f033f49c6c95b-3674x2454.avif");
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  height: 80vh; /* or 100vh for full-screen */
 
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
   text-align: center;
 }
 
@@ -162,7 +163,6 @@ body {
   color: white;
   font-family: "Caudex", serif;
 
-  padding: 0px 20px;
   font-size: 3rem;
 }
 
@@ -193,16 +193,58 @@ body {
   background: #cead61;
 }
 
+/* vertical container */
+.vert_container {
+  display: flex;
+  align-items: center; /* Vertically centers child elements along the cross-axis */
+  flex-direction: column;
+  background-color: DodgerBlue;
+  margin: 50px;
+  padding: 30px;
+}
+
+.vert_container div {
+  background-image: url("./images/Kirkjufell-mountain.jpg");
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+  background-size: cover;
+  width: 70vw; /* 50% of viewport width */
+  height: 40vh;
+
+  background-repeat: no-repeat;
+}
+
 /*flex box section under her */
 .flex_container {
-  margin: 60px;
+  margin: 50px;
   padding: 30px;
   display: flex;
   background-color: DodgerBlue;
 }
 
+.flex_container h1 {
+  font-family: "Caudex", serif;
+
+  border-radius: 10px;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.flex_container p {
+  font-family: "Caudex", serif;
+
+  border-radius: 10px;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .flex_container div {
-  background-color: #f1f1f1;
+  background-image: url("./images/Kirkjufell-mountain.jpg");
   margin: 10px;
   padding: 20px;
   font-size: 30px;
