@@ -196,18 +196,30 @@ body {
 /* vertical container */
 .vert_container {
   display: flex;
-  align-items: center; /* Vertically centers child elements along the cross-axis */
+
   flex-direction: column;
   background-color: DodgerBlue;
   margin: 50px;
   padding: 30px;
+  font-family: "Uncial Antiqua";
 }
 
+.vert_container h1 {
+  font-family: "Caudex", serif;
+  align-items: left;
+  border-radius: 10px;
+  color: rgb(17, 1, 1);
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/*default div */
 .vert_container div {
   background-image: url("./images/Kirkjufell-mountain.jpg");
   margin: 10px;
   padding: 20px;
   font-size: 30px;
+  font-family: "Uncial Antiqua";
   background-size: cover;
   width: 70vw; /* 50% of viewport width */
   height: 40vh;
@@ -215,7 +227,7 @@ body {
   background-repeat: no-repeat;
 }
 
-/*flex box section under her */
+/*flex box section under here */
 .flex_container {
   margin: 50px;
   padding: 30px;
