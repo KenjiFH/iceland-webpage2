@@ -198,13 +198,14 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: DodgerBlue;
+
   margin: 50px;
-  padding: 30px;
+
   font-family: "Uncial Antiqua";
 }
 .vert_container h1 {
-  font-family: "Caudex", serif;
+  text-align: left;
+  font-family: "Uncial Antiqua";
   font-weight: bold;
   border-radius: 10px;
   color: rgb(17, 1, 1);
@@ -213,107 +214,155 @@ body {
   margin-bottom: 0px; /* reduce space */
 }
 .vert_container h3 {
-  font-family: "Caudex", serif;
-  font-weight: bold;
-
+  text-align: left;
+  font-family: "Uncial Antiqua";
+  font-weight: lighter;
   border-radius: 10px;
   color: rgb(17, 1, 1);
   padding: 10px 20px;
   margin-top: 0; /* remove the gap above */
-  margin-bottom: 20px;
 }
 
-.image-box {
-  width: 70vw;
+.location-card {
+  width: 85vw;
+
+  margin: auto; /* center on page */
+  margin-bottom: 60px;
+}
+.image-box2 {
   aspect-ratio: 16 / 9;
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  margin: 20px 0;
-  padding: 20px;
-
-  font-size: 30px;
-  font-family: "Caudex", serif;
-
-  border-radius: 12px;
   transition: transform 0.3s ease;
-  display: flex;
-  align-items: flex-end;
-}
+  width: 100%;
+  height: 50vh;
 
-.image-box .title {
-  position: relative;
-  z-index: 2;
-  color: white;
-  padding: 20px;
+  border-radius: 10px;
 }
-.image-box:hover {
+.image-box2:hover {
   transform: scale(1.03);
+  cursor: pointer;
 }
-/*verrt container with different images*/
-.vert_container .image-box {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.location-text {
+  font-family: "Uncial Antiqua";
+  text-decoration: underline;
+  font-size: 1.5rem;
+  margin-top: 12px;
+  margin-left: 4px;
+  color: #222;
+  text-align: left; /* optional */
+}
+.location-text:hover {
+  cursor: pointer;
+}
 
-  width: 70vw;
-  height: 40vh;
+/* ===== Footer Styles ===== */
 
-  margin: 10px 0 100px;
-  padding: 20px;
-
-  font-size: 30px;
+.site-footer {
+  background-color: #1a1a1a; /* nice dark Icelandic vibe */
+  color: #eee;
+  padding: 40px 20px 20px;
   font-family: "Caudex", serif;
-  border-radius: 10px; /* optional improvement */
+  margin-top: 80px;
 }
 
-/*default div */
-.vert_container div {
-  background-image: url("./images/Kirkjufell-mountain.jpg");
-  margin: 10px;
-  padding: 20px;
-  font-size: 30px;
-  font-family: "Caudex", serif;
-  background-size: cover;
-  width: 70vw; /* 50% of viewport width */
-  height: 40vh;
-  margin-bottom: 100px;
-  background-repeat: no-repeat;
-}
-
-/*flex box section under here */
-.flex_container {
-  margin: 50px;
-  padding: 30px;
+.footer-content {
   display: flex;
-  background-color: DodgerBlue;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
 }
 
-.flex_container h1 {
-  font-family: "Caudex", serif;
+.footer-section {
+  flex: 1 1 250px;
+}
 
-  border-radius: 10px;
+.footer-title {
+  font-size: 1.8rem;
+  font-family: "Uncial Antiqua";
+  margin-bottom: 10px;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Footer Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin: 6px 0;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
   color: white;
-  padding: 10px 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
-.flex_container p {
-  font-family: "Caudex", serif;
-
-  border-radius: 10px;
-  color: white;
-  padding: 10px 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+/* Social Icons */
+.social-icons a img {
+  width: 24px;
+  margin-right: 12px;
+  filter: brightness(90%);
+  transition: 0.3s;
 }
 
-.flex_container div {
-  background-image: url("./images/Kirkjufell-mountain.jpg");
-  margin: 10px;
-  padding: 20px;
-  font-size: 30px;
+.social-icons a img:hover {
+  filter: brightness(120%);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 650px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.social-icons {
+  display: flex;
+  filter: brightness(100%) saturate(0%) invert(100%); /* need 2 use this for svg*/
+  gap: 16px; /* space between icons */
+  align-items: center;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: white; /* default icon color */
+  text-decoration: none;
+  transition: 0.3s ease; /* smooth hover effect */
+}
+
+.social-icons a:hover {
+  filter: invert(25%) sepia(80%) saturate(600%) hue-rotate(-10deg);
+  transform: scale(1.15); /* zoom effect */
+}
+
+.social-icons i {
+  font-size: 1.5rem; /* icon size */
 }
