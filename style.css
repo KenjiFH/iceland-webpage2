@@ -196,34 +196,90 @@ body {
 /* vertical container */
 .vert_container {
   display: flex;
-
+  align-items: center;
   flex-direction: column;
   background-color: DodgerBlue;
   margin: 50px;
   padding: 30px;
   font-family: "Uncial Antiqua";
 }
-
 .vert_container h1 {
   font-family: "Caudex", serif;
-  align-items: left;
+  font-weight: bold;
   border-radius: 10px;
   color: rgb(17, 1, 1);
   padding: 10px 20px;
   margin-top: 20px;
+  margin-bottom: 0px; /* reduce space */
+}
+.vert_container h3 {
+  font-family: "Caudex", serif;
+  font-weight: bold;
+
+  border-radius: 10px;
+  color: rgb(17, 1, 1);
+  padding: 10px 20px;
+  margin-top: 0; /* remove the gap above */
   margin-bottom: 20px;
 }
+
+.image-box {
+  width: 70vw;
+  aspect-ratio: 16 / 9;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  margin: 20px 0;
+  padding: 20px;
+
+  font-size: 30px;
+  font-family: "Caudex", serif;
+
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+}
+
+.image-box .title {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 20px;
+}
+.image-box:hover {
+  transform: scale(1.03);
+}
+/*verrt container with different images*/
+.vert_container .image-box {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 70vw;
+  height: 40vh;
+
+  margin: 10px 0 100px;
+  padding: 20px;
+
+  font-size: 30px;
+  font-family: "Caudex", serif;
+  border-radius: 10px; /* optional improvement */
+}
+
 /*default div */
 .vert_container div {
   background-image: url("./images/Kirkjufell-mountain.jpg");
   margin: 10px;
   padding: 20px;
   font-size: 30px;
-  font-family: "Uncial Antiqua";
+  font-family: "Caudex", serif;
   background-size: cover;
   width: 70vw; /* 50% of viewport width */
   height: 40vh;
-
+  margin-bottom: 100px;
   background-repeat: no-repeat;
 }
 
