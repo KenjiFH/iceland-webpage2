@@ -150,7 +150,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 
-  height: 80vh; /* or 100vh for full-screen */
+  height: 100vh; /* or 100vh for full-screen */
 
   display: flex;
   justify-content: center;
