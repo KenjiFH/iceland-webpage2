@@ -8,6 +8,7 @@ Wheat yellow (#d3b878)
 */
 
 /* Fixed navbar */
+/* ===== navbar Styles ===== */
 nav {
   background-color: rgba(
     0,
@@ -47,7 +48,7 @@ nav {
 .navbar a:hover {
   color: #cead61;
 }
-
+/* ===== Body Styles ===== */
 /* Body scrollable */
 body {
   padding-top: 1px;
@@ -58,6 +59,7 @@ body {
   overflow-y: auto; /* enable vertical scrolling */
   overflow-x: hidden; /* hide horizontal scrollbar */
 }
+/* ===== Carousel Styles ===== */
 
 /* Container for panels */
 .container {
@@ -67,6 +69,12 @@ body {
   width: 90vw;
   margin: 20px auto; /* center horizontally */
   gap: 10px;
+}
+
+.caro-container {
+  gap: 10px;
+  padding-top: 80px;
+  padding-bottom: 60px;
 }
 
 /* Panels */
@@ -236,7 +244,7 @@ body {
   background-repeat: no-repeat;
   transition: transform 0.3s ease;
   width: 100%;
-  height: 50vh;
+  height: 45%;
 
   border-radius: 10px;
 }
@@ -246,7 +254,7 @@ body {
 }
 .location-text {
   font-family: "Uncial Antiqua";
-  text-decoration: underline;
+  font-weight: bold;
   font-size: 1.5rem;
   margin-top: 12px;
   margin-left: 4px;
