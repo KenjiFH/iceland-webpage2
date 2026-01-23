@@ -72,6 +72,7 @@ body {
 }
 
 .caro-container {
+  text-align: center;
   gap: 10px;
   padding-top: 80px;
   padding-bottom: 60px;
@@ -99,7 +100,9 @@ body {
   margin: 0;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.5s ease 0.3s, transform 0.7s ease 0.3s;
+  transition:
+    opacity 0.5s ease 0.3s,
+    transform 0.7s ease 0.3s;
 }
 
 .panel.active {
@@ -162,6 +165,7 @@ body {
 
   display: flex;
   justify-content: center;
+  text-align: center;
   align-items: center;
   padding: 0 20px;
   text-align: center;
@@ -263,6 +267,81 @@ body {
 }
 .location-text:hover {
   cursor: pointer;
+}
+/* ===== Acitivty card Styles ===== */
+
+/* Activities Section */
+.activities {
+  width: 85vw;
+  margin: auto;
+  margin-bottom: 80px;
+}
+
+/* Activity Card */
+.activity-card {
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+
+  cursor: pointer;
+  background-color: #cead61;
+}
+
+/* Image */
+.activity-card__image {
+  aspect-ratio: 16 / 9;
+
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.activity-card:hover {
+  transform: scale(1.01);
+  box-shadow: #171715;
+}
+
+/* Content */
+.activity-card__content {
+  padding: 4vh 5vh;
+}
+
+/* Title */
+.activity-card__title {
+  font-family: "Uncial Antiqua";
+  font-size: 1.6rem;
+  margin: 0 0 8px 0;
+  color: rgb(17, 1, 1);
+}
+
+/* Metadata row */
+.activity-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vh;
+  font-size: 0.9rem;
+  margin-bottom: 2vh;
+  color: #444;
+}
+
+/* Individual metadata */
+.activity-card__type {
+  font-weight: bold;
+}
+
+.activity-card__time,
+.activity-card__cost {
+  opacity: 0.85;
+}
+
+/* Description */
+.activity-card__description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #222;
+  margin: 0;
 }
 
 /* ===== Footer Styles ===== */
